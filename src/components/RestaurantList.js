@@ -3,9 +3,12 @@ import Restaurant from "./Restaurant";
 
 function RestaurantList() {
   return (
-    <div>
-      RestaurantList
-      <Restaurant />{" "}
+    <div class="restaurantList">
+      <Restaurant />
+      <Restaurant />
+      <Restaurant />
+      <Restaurant />
+      <Restaurant />
     </div>
   );
 }
