@@ -21,6 +21,13 @@
   font: italic;
   color: #ffffff;
 }
+.main {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  width: 100%;
+}
+
 .filterList {
   display: flex;
   flex-direction: row;
@@ -49,17 +56,10 @@
   justify-content: center;
 }
 
-.main {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  width: 100%;
-}
-
 .restaurant {
   background: #f7b05b;
-  height: 150px;
-  max-width: 400px;
+  height: 200px;
+  width: 350px;
   /* width: 300px; */
   margin: 5px;
   padding: 10px;
@@ -73,13 +73,14 @@
 }
 
 .pic {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   align-items: center;
   padding: 10px;
 }
 .phrase {
   padding: center;
+  width: 250px;
 
   /* min-width: 70vw; */
   padding: 10px;
