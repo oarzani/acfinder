@@ -12,17 +12,21 @@
   align-items: center;
 }
 .header {
-  background: green;
+  background: #e4961d;
   height: 60px;
   width: 100%;
   text-align: center;
+}
+.headline {
+  font: italic;
+  color: #ffffff;
 }
 .filterList {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  background-color: blueviolet;
+  background-color: #ffc15e;
   width: 100%;
   height: 80px;
 }
@@ -30,17 +34,19 @@
 .filter {
   width: 25%;
   height: 25px;
-  background: yellow;
-  color: blue;
+  background: white;
+  color: black;
 }
 .restaurantList {
   display: flex;
-  flex-direction: column;
-  background-color: yellowgreen;
+  flex-wrap: wrap;
+
+  background-color: #ffffff;
   align-items: center;
   overflow: auto;
   width: 100%;
-  margin: 15px;
+  padding: 15px;
+  justify-content: center;
 }
 
 .main {
@@ -51,22 +57,30 @@
 }
 
 .restaurant {
-  background: red;
+  background: #f7b05b;
   height: 150px;
-  margin-top: 5px;
-  padding: 20px;
+  max-width: 400px;
+  /* width: 300px; */
+  margin: 5px;
+  padding: 10px;
   display: flex;
-  flex-direction: row;
 }
 
-.image {
-  height: 60px;
-  width: 60px;
-  background: black;
+.innerRestaurant {
+  display: flex;
+  flex-wrap: wrap;
+  background: #e46c0a;
+}
+
+.pic {
+  height: 100px;
+  width: 100px;
+  align-items: center;
   padding: 10px;
 }
 .phrase {
   padding: center;
-  background: olive;
-  min-width: 80vw;
+
+  /* min-width: 70vw; */
+  padding: 10px;
 }
