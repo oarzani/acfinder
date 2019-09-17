@@ -37,7 +37,7 @@ function Restaurant(props) {
         Categories:
         {props.restaurant.categories.map(category => {
           return (
-            <span className="card__category" key={category}>
+            <span className="innerRestaurant" key={category}>
               {category}
             </span>
           );

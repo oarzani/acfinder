@@ -2,40 +2,41 @@ import React from "react";
 import Restaurant from "./Restaurant";
 import { restaurants } from "../api/restaurants";
 
-function RestaurantList({ selectedFilter }) {
-  console.log(selectedFilter);
+function RestaurantList({ selectedFilters }) {
+  console.log(selectedFilters);
   const filtereredRestraunts = restaurants.filter(restaurant => {
-    if (!selectedFilter) {
-      return true;
-    }
-    if (selectedFilter.name === "distance") {
-      switch (selectedFilter.value) {
+    let y = true;
+
+    if (selectedFilters.distance) {
+      switch (selectedFilters.distance) {
         case "<1":
-          return restaurant.distance < 1;
+          y = restaurant.distance < 1;
+          break;
         case "<2":
-          return restaurant.distance < 2;
+          y = restaurant.distance < 2;
+          break;
         case "<4":
-          return restaurant.distance < 4;
+          y = restaurant.distance < 4;
+          break;
         default:
           break;
       }
     }
-    if (selectedFilter.name === "price") {
-      return restaurant.price >= selectedFilter.value.length;
-      // return restaurant.price.includes(selectedFilter.value);
+    if (y && selectedFilters.price) {
+      y = restaurant.price === selectedFilters.price;
     }
 
-    if (selectedFilter.name === "categories") {
-      return restaurant.categories.includes(selectedFilter.value);
+    if (y && selectedFilters.categories) {
+      y = restaurant.categories.includes(selectedFilters.categories);
     }
-    return true;
+    return y;
   });
   return (
-    <div class="restaurantList">
+    <section class="restaurantList">
       {filtereredRestraunts.map(restaurant => {
         return <Restaurant restaurant={restaurant} />;
       })}
-    </div>
+    </section>
   );
 }
 
