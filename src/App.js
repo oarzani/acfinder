@@ -5,8 +5,14 @@ import RestaurantList from "./components/RestaurantList";
 import Header from "./components/Header";
 
 function App() {
+  const [filter, setFilter] = React.useState(null);
+
   function handleFilterChange(name, value) {
-    console.log(`${name}: ${value}`);
+    const newFilter = {
+      name: name,
+      value: value
+    };
+    setFilter(newFilter);
   }
 
   return (
@@ -14,7 +20,7 @@ function App() {
       <Header />
       <main className="main">
         <FilterList onFilterChange={handleFilterChange} />
-        <RestaurantList />
+        <RestaurantList selectedFilter={filter} />
       </main>
     </div>
   );

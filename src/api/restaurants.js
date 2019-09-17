@@ -4,7 +4,8 @@ export const restaurants = [
       "https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80",
     title: "Bento Box",
     categories: ["sushi"],
-    distance: 1,
+    distance: 5,
+    price: "$$",
     rating: 3.5,
     votes: 5,
     description: "Long waiting time"
@@ -14,7 +15,8 @@ export const restaurants = [
       "https://images.unsplash.com/photo-1504544750208-dc0358e63f7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60",
     title: "Rich'n Greens",
     categories: ["wraps", "bowls", "salads"],
-    distance: 1,
+    distance: 0.5,
+    price: "$",
     rating: 4.8,
     votes: 10,
     description: "daily deal"
@@ -25,6 +27,7 @@ export const restaurants = [
     title: "Supersalad",
     categories: ["salad", "wraps", "bowls"],
     distance: 1,
+    price: "$",
     rating: 3.5,
     votes: 5,
     description: "fresh"

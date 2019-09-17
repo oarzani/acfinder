@@ -29,10 +29,10 @@ function Filter(props) {
     <select
       className="filter"
       onChange={event => {
-        props.onChange(event.target.value);
+        props.onChange(props.filter.name, event.target.value);
       }}
     >
-      <option>{props.filter.type}</option>
+      <option>{props.filter.name}</option>
       {props.filter.options.map(option => {
         return <option key={option}>{option}</option>;
       })}

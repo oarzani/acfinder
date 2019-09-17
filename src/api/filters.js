@@ -1,5 +1,5 @@
 export const filters = [
-  { type: "Price", options: ["$", "$$", "$$$"] },
-  { type: "Distance", options: ["<5", "<10", "<20"] },
-  { type: "Categories", options: ["Wrap", "Bowl", "Sushi", "Salad"] }
+  { name: "price", options: ["$", "$$", "$$$"] },
+  { name: "distance", options: ["<1", "<2", "<4"] },
+  { name: "categories", options: ["wraps", "bowls", "sushi", "salads"] }
 ];
