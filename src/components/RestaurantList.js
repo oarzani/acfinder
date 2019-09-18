@@ -1,6 +1,16 @@
 import React from "react";
 import Restaurant from "./Restaurant";
 import { restaurants } from "../api/restaurants";
+import styled from "styled-components";
+
+const ListRestaurant = styled.section`
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+`;
 
 function RestaurantList({ selectedFilters }) {
   console.log(selectedFilters);
@@ -32,11 +42,11 @@ function RestaurantList({ selectedFilters }) {
     return y;
   });
   return (
-    <section class="list__restaurant">
+    <ListRestaurant>
       {filtereredRestraunts.map(restaurant => {
         return <Restaurant restaurant={restaurant} />;
       })}
-    </section>
+    </ListRestaurant>
   );
 }
 
