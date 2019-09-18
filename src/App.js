@@ -9,7 +9,7 @@ function App() {
 
   function handleFilterChange(name, value) {
     const newFilters = { ...filters };
-    newFilters[name] = value;
+    newFilters[name] = value; //Frage.
     setFilters(newFilters);
   }
 

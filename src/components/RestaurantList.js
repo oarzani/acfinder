@@ -32,7 +32,7 @@ function RestaurantList({ selectedFilters }) {
     return y;
   });
   return (
-    <section class="restaurantList">
+    <section class="list__restaurant">
       {filtereredRestraunts.map(restaurant => {
         return <Restaurant restaurant={restaurant} />;
       })}

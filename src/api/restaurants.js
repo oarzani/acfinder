@@ -1,7 +1,7 @@
 export const restaurants = [
   {
     imgSrc:
-      "https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80",
+      "https://static.lieferando.de/images/chains/de/bento_box/logo_465x320.png",
     title: "Bento Box",
     categories: ["sushi"],
     distance: 5,
@@ -12,7 +12,7 @@ export const restaurants = [
   },
   {
     imgSrc:
-      "https://images.unsplash.com/photo-1504544750208-dc0358e63f7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60",
+      "https://static.lieferando.de/images/restaurants/de/O000PR5/logo_465x320.png",
     title: "Rich'n Greens",
     categories: ["wraps", "bowls", "salads"],
     distance: 0.5,
@@ -23,8 +23,8 @@ export const restaurants = [
   },
   {
     imgSrc:
-      "https://images.unsplash.com/photo-1523986371872-9d3ba2e2a389?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60",
-    title: "Supersalad",
+      "https://static.lieferando.de/images/restaurants/de/ONQ055P/logo_465x320.png",
+    title: "Suparsalad",
     categories: ["salad", "wraps", "bowls"],
     distance: 1,
     price: "$",

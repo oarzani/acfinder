@@ -17,11 +17,10 @@
 
 // export default Restaurant;
 import React from "react";
-import { restaurants } from "../api/restaurants";
 
 function Restaurant(props) {
   return (
-    <div className="restaurant">
+    <div className="card">
       {props.restaurant.title}
       <img
         src={props.restaurant.imgSrc}
@@ -37,7 +36,7 @@ function Restaurant(props) {
         Categories:
         {props.restaurant.categories.map(category => {
           return (
-            <span className="innerRestaurant" key={category}>
+            <span className="card__category" key={category}>
               {category}
             </span>
           );
