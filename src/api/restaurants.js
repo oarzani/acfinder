@@ -4,7 +4,7 @@ export const restaurants = [
       "https://static.lieferando.de/images/chains/de/bento_box/logo_465x320.png",
     title: "Bento Box",
     categories: ["sushi"],
-    distance: 5,
+    distance: 3.5,
     price: "$$",
     rating: 3.5,
     votes: 5,
@@ -25,7 +25,7 @@ export const restaurants = [
     imgSrc:
       "https://static.lieferando.de/images/restaurants/de/ONQ055P/logo_465x320.png",
     title: "Suparsalad",
-    categories: ["salad", "wraps", "bowls"],
+    categories: ["salads", "wraps", "bowls"],
     distance: 1,
     price: "$",
     rating: 3.5,

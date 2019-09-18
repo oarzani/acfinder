@@ -39,14 +39,22 @@ const Main = styled.main`
 `;
 
 function App() {
-  const [filters, setFilters] = React.useState("");
+  const [filters, setFilters] = React.useState({
+    categories: "wraps"
+  });
 
   function handleFilterChange(name, value) {
     const newFilters = { ...filters };
-    newFilters[name] = value; //Frage.
+    if (value) {
+      newFilters[name] = value;
+    } else {
+      delete newFilters[name];
+    }
+    //Frage.
     setFilters(newFilters);
   }
   return (
+
     <>
       <GlobalStyle />
       <Appdiv>
