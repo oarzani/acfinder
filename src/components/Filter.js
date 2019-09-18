@@ -24,7 +24,7 @@
 // })}
 import React from "react";
 
-function Filter({ filter, onChange }) {
+function Filter({ selectedFilter, filter, onChange }) {
   return (
     <select
       className="filter"
@@ -34,7 +34,12 @@ function Filter({ filter, onChange }) {
     >
       <option value="">{filter.name}</option>
       {filter.options.map(option => {
-        return <option key={option}>{option}</option>;
+        const selected = option === selectedFilter;
+        return (
+          <option key={option} value={option} selected={selected}>
+            {option}
+          </option>
+        );
       })}
     </select>
   );

@@ -5,11 +5,18 @@ import RestaurantList from "./components/RestaurantList";
 import Header from "./components/Header";
 
 function App() {
-  const [filters, setFilters] = React.useState("");
+  const [filters, setFilters] = React.useState({
+    categories: "wraps"
+  });
 
   function handleFilterChange(name, value) {
     const newFilters = { ...filters };
-    newFilters[name] = value; //Frage.
+    if (value) {
+      newFilters[name] = value;
+    } else {
+      delete newFilters[name];
+    }
+    //Frage.
     setFilters(newFilters);
   }
 
@@ -17,7 +24,10 @@ function App() {
     <div className="App">
       <Header />
       <main className="main">
-        <FilterList onFilterChange={handleFilterChange} />
+        <FilterList
+          selectedFilters={filters}
+          onFilterChange={handleFilterChange}
+        />
         <RestaurantList selectedFilters={filters} />
       </main>
     </div>
