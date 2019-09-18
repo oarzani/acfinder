@@ -1,32 +1,20 @@
-// import React from "react";
-
-// function Filter(props) {
-//   const [filter, setFilter] = React.useState("");
-//   return (
-
-//       <select
-//         className="filter"
-//         value={filter}
-//         onChange={event => setFilter(event.target.value);}>
-//         <option>{props.filter.type}</option>
-//         {props.filter.options.map(singleElement => {
-//           return <option>{singleElement}</option>;
-//         })}
-//       </select>
-
-//   );
-// }
-
-// export default Filter;
-
-// {filters.map(filter => {
-//   return <Filter filter={filter} />;
-// })}
 import React from "react";
+import styled from "styled-components";
+
+const Filtercomponent = styled.select`
+  width: 20%;
+  height: 25px;
+  border: solid #874c62 3px;
+  border-radius: 5px;
+  text-align: center;
+  &:focus {
+    outline: none;
+  }
+`;
 
 function Filter({ selectedFilter, filter, onChange }) {
   return (
-    <select
+    <Filtercomponent
       className="filter"
       onChange={event => {
         onChange(filter.name, event.target.value);
@@ -41,7 +29,7 @@ function Filter({ selectedFilter, filter, onChange }) {
           </option>
         );
       })}
-    </select>
+    </Filtercomponent>
   );
 }
 
