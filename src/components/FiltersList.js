@@ -16,7 +16,7 @@ const ListFilter = styled.section`
   box-shadow: 0 5px 5px rgba(117, 117, 90, 0.6);
 `;
 
-function FilterList({ onFilterChange, selectedFilters }) {
+function FilterList({ onFilterChange, selectedFilter }) {
   return (
     <ListFilter>
       {filters.map(filter => {
@@ -25,7 +25,7 @@ function FilterList({ onFilterChange, selectedFilters }) {
             key={filter.name}
             filter={filter}
             onChange={onFilterChange}
-            selectFilter={selectedFilters[filter.name]}
+            selectFilter={selectedFilter[filter.name]}
           />
         );
       })}

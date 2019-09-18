@@ -40,7 +40,7 @@ const Main = styled.main`
 
 function App() {
   const [filters, setFilters] = React.useState({
-    categories: "wraps"
+    categories: "sushi"
   });
 
   function handleFilterChange(name, value) {
@@ -54,13 +54,15 @@ function App() {
     setFilters(newFilters);
   }
   return (
-
     <>
       <GlobalStyle />
       <Appdiv>
         <Title />
         <Main>
-          <FilterList onFilterChange={handleFilterChange} />
+          <FilterList
+            onFilterChange={handleFilterChange}
+            selectedFilter={filters}
+          />
           <RestaurantList selectedFilters={filters} />
         </Main>
       </Appdiv>
