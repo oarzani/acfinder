@@ -2,7 +2,41 @@ import React from "react";
 import "./App.css";
 import FilterList from "./components/FiltersList";
 import RestaurantList from "./components/RestaurantList";
-import Header from "./components/Header";
+import Title from "./components/Header";
+import styled, { createGlobalStyle } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  background: green;
+  /* background: #faf9ee; */
+}
+`;
+
+const Appdiv = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Main = styled.main`
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  padding-bottom: 25px;
+`;
 
 function App() {
   const [filters, setFilters] = React.useState("");
@@ -12,15 +46,17 @@ function App() {
     newFilters[name] = value; //Frage.
     setFilters(newFilters);
   }
-
   return (
-    <div className="App">
-      <Header />
-      <main className="main">
-        <FilterList onFilterChange={handleFilterChange} />
-        <RestaurantList selectedFilters={filters} />
-      </main>
-    </div>
+    <>
+      <GlobalStyle />
+      <Appdiv>
+        <Title />
+        <Main>
+          <FilterList onFilterChange={handleFilterChange} />
+          <RestaurantList selectedFilters={filters} />
+        </Main>
+      </Appdiv>
+    </>
   );
 }
 
