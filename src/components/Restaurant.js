@@ -4,7 +4,8 @@ import styled from "styled-components";
 const CardTitle = styled.div`
   width: 80%;
   margin-top: 20px;
-  background: #f7b05b;
+  background: ${props => (props.odd ? "#f7b05b" : "#feeec8")};
+  /* background: #f7b05b; */
   padding: 15px;
   border-radius: 15px;
   box-shadow: 0 5px 10px rgba(128, 128, 128, 0.5);
@@ -21,7 +22,7 @@ const CardCategory = styled.span`
 
 function Restaurant(props) {
   return (
-    <CardTitle>
+    <CardTitle odd={props.odd}>
       {props.restaurant.title}
       <CardImage src={props.restaurant.imgSrc} alt={props.restaurant.title} />
       <p>{props.restaurant.description}</p>

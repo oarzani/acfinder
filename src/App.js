@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./GlobalStyle.js";
 import FilterList from "./components/FiltersList";
 import RestaurantList from "./components/RestaurantList";
 import Title from "./components/Header";
