@@ -28,7 +28,8 @@ function Home({ history, location }) {
   const [filters, setFilters] = React.useState({
     categories: params.get("categories") || "",
     distance: params.get("distance") || "",
-    rating: params.get("price") || ""
+    price: params.get("price") || "",
+    rating: params.get("rating") || ""
   });
   function handleFilterChange(name, value) {
     // Create a copy of filter objects

@@ -24,7 +24,11 @@ function Filter({ filter, onChange, selectFilter }) {
     >
       <option value="">{filter.name}</option>
       {filter.options.map(option => {
-        return <option key={option}>{option}</option>;
+        return (
+          <option key={option} value={option}>
+            {option}
+          </option>
+        );
       })}
     </Filtercomponent>
   );

@@ -35,6 +35,10 @@ function RestaurantList({ selectedFilters }) {
     if (y && selectedFilters.price) {
       y = restaurant.price === selectedFilters.price;
     }
+    if (y && selectedFilters.rating) {
+      y = restaurant.rating > selectedFilters.rating.length;
+      return y;
+    }
 
     if (y && selectedFilters.categories) {
       y = restaurant.categories.includes(selectedFilters.categories);
