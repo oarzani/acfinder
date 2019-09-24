@@ -23,7 +23,7 @@ const Main = styled.main`
   padding-bottom: 25px;
 `;
 
-function Home({ history, location }) {
+function Home({ history, location, toggleTheme }) {
   const params = new URLSearchParams(location.search);
   const [filters, setFilters] = React.useState({
     categories: params.get("categories") || "",
@@ -56,7 +56,7 @@ function Home({ history, location }) {
   }
   return (
     <Appdiv>
-      <Title />
+      <Title toggleTheme={toggleTheme} />
       <Main>
         <FilterList
           onFilterChange={handleFilterChange}
