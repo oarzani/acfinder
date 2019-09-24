@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import DarkmodeToggleButton from "./DarkmodeToggleButton";
 
 const Header = styled.header`
   z-index: 10;
@@ -15,10 +16,11 @@ const Headline = styled.h1`
   font-size: 1.6em;
 `;
 
-function Title() {
+function Title({ toggleTheme }) {
   return (
     <Header>
       <Headline className="headline">ATfinder</Headline>
+      <DarkmodeToggleButton toggleTheme={toggleTheme} />
     </Header>
   );
 }
